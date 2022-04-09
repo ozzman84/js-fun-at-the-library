@@ -12,14 +12,15 @@
 
 // var title = "Harry Potter";
 // var ...
-
+var title = 'Harry Potter';
+var pages = 29
 
 
 // Reassign (not initialize) your "pages" variable from above. An editor came around and
 // condensed the book, use a built in math operator to make the page count a quarter
-// of what it currently is 
+// of what it currently is
 
-
+pages = 
 
 // Initialize a new variable "movie", but leave it undefined
 
@@ -47,7 +48,7 @@
 
 
 // Express the following in code: If the variable "pages" is less than 1000 log
-// the statement 'I could read that in a day!', otherwise, log the statement 
+// the statement 'I could read that in a day!', otherwise, log the statement
 // 'Ok, maybe I could read that in a day and a half'
 
 
