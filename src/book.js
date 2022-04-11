@@ -31,8 +31,8 @@ function writeBook(title, mainCharacter, genre) {
   return book
 }
 
-function editBook(ghoulBook) {
-  ghoulBook.pageCount -= ghoulBook.pageCount * .25;
+function editBook(book) {
+  book.pageCount -= book.pageCount * .25;
 }
 
 module.exports = {
