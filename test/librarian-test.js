@@ -100,3 +100,21 @@ describe('Librarian (class)', function() {
     assert.equal(sevenDaysLate, 3);
   });
 });
+//
+//
+// if (patient.insuranceType === InsuranceType.Medicaid) {
+//       const medicaidProvider = licensedProviders(task, providers, patients).find(provider => provider.medicaidEnabled);
+//       task.ownerId = medicaidProvider.id;
+//     } else {
+//       task.ownerId = providers[0].id;
+// 	@@ -30,3 +36,10 @@ export const assignTasks = (tasks, providers, patients) => {
+//
+//   return tasks;
+// }
+//
+// export const licensedProvides = (task, providers, patients) => {
+//   const patient = patients.find(patient => patient == task.patientId)
+//   const providers = providers.find(provider => provider.licenses.includes(patient.state))
+//
+//   return providers;
+// }
