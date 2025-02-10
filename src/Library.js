@@ -19,7 +19,6 @@ function checkShelfIndex(shelf, title) {
 }
 
 function checkoutBook(library, title, genre) {
-  // let index = library.shelves[genre].findIndex(book => book.title === title);
   let index = checkShelfIndex(library.shelves[genre], title)
   if (index !== -1) {
     library.shelves[genre].splice(index, 1);
@@ -31,6 +30,5 @@ function checkoutBook(library, title, genre) {
 module.exports = {
   createLibrary,
   addBook,
-  checkoutBook,
-  checkShelfIndex
+  checkoutBook
 };
