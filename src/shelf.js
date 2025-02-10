@@ -11,9 +11,17 @@ function unshelfBook(bookTitle, shelf) {
   shelf.splice(index, 1);
 }
 
+function listTitles(shelf) {
+  let titles = ''
+  for (let book in shelf) {
+    titles += book.title;
+  }
+  return titles
+}
+
 module.exports = {
   shelfBook,
   unshelfBook,
-  // listTitles,
+  listTitles,
   // searchShelf
 };
