@@ -5,20 +5,21 @@ class Librarian {
   }
 
   greetPatron(name, morning = false) {
-    if (morning === false) {
-      return 'Hello, ' + name + '!'
-    } else {
+    if (morning) {
       return 'Good morning, ' + name + '!'
     }
+    return 'Hello, ' + name + '!'
   }
 
   findBook(book) {
-    const bookShelve = Object.keys(this.library.shelves)
+    for (let genre in this.library.shelves) {
+      const index = this.library.shelves[genre].findIndex(item => item.title === book.title)
 
-    if (this.library[book.genre].includes(book)) {
-      return 'Yes, we have ' + book
-    } else {
-      return 'Sorry, we do not have ' + book
+      if (index !== -1) {
+        return 'Sorry, we do not have ' + book
+      } else {
+        return 'Yes, we have ' + book
+      }
     }
   }
 }
