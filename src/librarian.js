@@ -11,16 +11,15 @@ class Librarian {
     return 'Hello, ' + name + '!'
   }
 
-  findBook(book) {
+  findBook(bookTitle) {
     for (let genre in this.library.shelves) {
-      const index = this.library.shelves[genre].findIndex(item => item.title === book.title)
+      const index = this.library.shelves[genre].findIndex(book => book.title === bookTitle)
 
       if (index !== -1) {
-        return 'Sorry, we do not have ' + book
-      } else {
-        return 'Yes, we have ' + book
+        return 'Yes, we have ' + bookTitle
       }
     }
+    return 'Sorry, we do not have ' + bookTitle
   }
 }
 
