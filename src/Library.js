@@ -4,7 +4,7 @@ function createLibrary(name) {
     shelves: {
       fantasy: [],
       fiction: [],
-      nonfiction: []
+      nonFiction: []
     }
   };
   return library
