@@ -19,9 +19,15 @@ function listTitles(shelf) {
   return titles
 }
 
+function searchShelf(shelf, bookTitle) {
+  let index = shelf.findIndex(book => book.title === bookTitle);
+
+  return index === -1 ? false : true;
+}
+
 module.exports = {
   shelfBook,
   unshelfBook,
   listTitles,
-  // searchShelf
+  searchShelf
 };
