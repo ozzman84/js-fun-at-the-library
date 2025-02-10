@@ -14,9 +14,13 @@ function addBook(library, book) {
   library.shelves[book.genre].push(book);
 }
 
-function checkoutBook(library, title, genre) {
-  let index = library.shelves[genre].findIndex(book => book.title === title);
+function checkShelfIndex(shelf, title) {
+  return shelf.findIndex(book => book.title === title);
+}
 
+function checkoutBook(library, title, genre) {
+  // let index = library.shelves[genre].findIndex(book => book.title === title);
+  let index = checkShelfIndex(library.shelves[genre], title)
   if (index !== -1) {
     library.shelves[genre].splice(index, 1);
     return `You have now checked out ${title} from the ${library.name}`
@@ -27,5 +31,6 @@ function checkoutBook(library, title, genre) {
 module.exports = {
   createLibrary,
   addBook,
-  checkoutBook
+  checkoutBook,
+  checkShelfIndex
 };
