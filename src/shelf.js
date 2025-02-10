@@ -12,11 +12,7 @@ function unshelfBook(bookTitle, shelf) {
 }
 
 function listTitles(shelf) {
-  let titles = ''
-  for (let book in shelf) {
-    titles += book.title;
-  }
-  return titles
+  return shelf.map(book => book.title).join(", ");
 }
 
 function searchShelf(shelf, bookTitle) {
